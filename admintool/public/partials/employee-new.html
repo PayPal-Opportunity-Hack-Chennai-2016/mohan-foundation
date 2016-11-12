@@ -1,0 +1,34 @@
+<div xmlns="http://www.w3.org/1999/html" style="font-size: large">
+
+  <h2>Create new action</h2>
+    <div ng-if="isResponseReceivedFromServer" ng-init="isResponseReceivedFromServer=false" style="color: #10ff5c">
+        {{status.message}}
+    </div>
+    <br>
+
+    <label>Employee id :</label>
+    <input style="padding-left: 10px" type="text" name="employee id" ng-model="document.id" >
+    <br><br>
+
+    <label>Employee name :</label>
+    <input style="padding-left: 10px" type="text" name="employee name" ng-model="document.name" >
+<br><br>
+
+    <label>Employee email :</label>
+    <input style="padding-left: 10px" type="text" name="employee email" ng-model="document.email" >
+    <br><br>
+
+        <label>Employee project :</label>
+        <select style="padding-left: 10px" type="text" name="employee project" ng-model="document.project" >
+            <option value="">Select Project</option>
+            <option ng-repeat="project in projectDocuments" value="{{project.name}}">{{project.name}}</option>
+            </select>
+    <br><br>
+
+    <a class="back" href="#/employees">Back</a> &nbsp;&nbsp;
+    <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="addDocument('employee')"> Submit</button>
+<!--
+//http://jsfiddle.net/fess81/axq5vu41/
+    //http://ng-learn.org/2014/01/Dom-Manipulations/
+-->
+</div>

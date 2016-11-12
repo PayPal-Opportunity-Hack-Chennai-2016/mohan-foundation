@@ -7,8 +7,8 @@ var _db;
 module.exports = {
 
   connectToServer : function( callback ) {
-      MongoClient.connect( "mongodb://mohan:mohan@waffle.modulusmongo.net:27017/edU4gaxi", function( err, db ) {
-      // MongoClient.connect( "mongodb://localhost:27017/mohan", function( err, db ) {
+     // MongoClient.connect( "mongodb://mohan:mohan@waffle.modulusmongo.net:27017/edU4gaxi", function( err, db ) {
+      MongoClient.connect( "mongodb://localhost:27017/mohan", function( err, db ) {
                           _db = db;
                            callback( err ); //return callback( err ); TODOD : What is the use of return here?
                         } );
