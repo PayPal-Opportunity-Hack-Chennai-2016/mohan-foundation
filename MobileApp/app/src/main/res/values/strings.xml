@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Mohan Foundation</string>
+    <string name="action_settings">Counselor Login</string>
+    <string name="eye_bank">Eye Banks</string>
+    <string name="skin_bank">Skin Banks</string>
+    <string name="body_donation">Body Donation</string>
+    <string name="donation_hospital">Donation Hospitals</string>
+    <string name="ngo">NGOs in Organ Donation</string>
+    <string name="transplant_center">Transplant Centres</string>
+    <string name="faq">FAQs</string>
+    <string name="pledge_your_organ">Pledge your organs</string>
+    <string name="join_members">Join Members</string>
+    <string name="hintUser">UserName</string>
+    <string name="hintPass">Password</string>
+    <string name="login">SIGN IN</string>
+    <string name="info">Organ Donation Helpline 180073100 </string>
+    <string name="register">Register</string>
+    <string name="login_screen_second_heading">DONATION</string>
+    <string name="login_screen_first_heading">ORGAN</string>
+    <string name="app_logo">&#xf1d8;</string>
+
+</resources>
