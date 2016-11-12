@@ -17,7 +17,7 @@ module.exports.validationsBasic = {
 module.exports.validationsAgainstDb = {
     checkIfProjectExistsAlready : function (newProject, callback) {
         var status = require("../domain/status.js");
-        var mongoUtil = require('../mongoutil');
+        var mongoUtil = require('../mongoutil/index');
         mongoUtil.connectToServer(function(err) {
                 console.dir(err);
                 mongoUtil.getAllDocuments('project', function(data){

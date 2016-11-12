@@ -6,12 +6,12 @@ app.use(bodyParser.json());
 
 
 
-app.use('/crud', require('./crud'));
+app.use('/crud', require('./apis/crud'));
 //app.use('/specific, require('./employee'));
 
 
 //mongoUtilModule
-var mongoUtilModule = require('./modules/mongoutil');
+var mongoUtilModule = require('./apis/modules/mongoutil');
 var mongoUtil = mongoUtilModule;
 mongoUtil.connectToServer(function(err) {
         console.dir(err);
