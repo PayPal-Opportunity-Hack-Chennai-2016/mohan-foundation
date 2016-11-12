@@ -1,4 +1,7 @@
 # mohan-foundation
-<< Please enter the title of your idea >>
-<< Please enter the description about your idea >>
-<< Please enter your team details below >>
+## Title 
+   Organ Donation India
+## Description 
+   Connects the organ donar with the needy people
+## Developers
+   Bharath Chennupati,Yamini Devi Chittari, Sathwik Chintalapudi, Kannan Duraisamy, Vignesh Suresh,Rohini Pasupuleti,Devayan Sarkar
