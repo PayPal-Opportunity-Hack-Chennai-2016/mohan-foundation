@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-app.use(express.static(__dirname + '/public'));//????????????
+app.use(express.static(__dirname + '/admintool/public'));//????????????
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 

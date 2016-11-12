@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="trackerApp">
+<head>
+    <title> Tracker </title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <script src="ext/angular-1.4.7.js"></script>
+    <script src="ext/angular-route-1.4.7.js"></script>
+
+    <script src="controller/crud-controller.js"></script>
+    <script src="controller/employee-actions-controller.js"></script>
+    <script src="controller/employee-action-controller.js"></script>
+    <script src="controller/action-controller.js"></script>
+    <script src="controller/action-view-controller.js"></script>
+    <script src="controller/defaulters-controller.js"></script>
+    <script src="controller/give-data-controller.js"></script>
+    <script src="controller/xl-controller.js"></script>
+    <!---->
+    <script src="directives/directives.js"></script>
+    <script src="controller/app-config.js"></script>
+
+</head>
+
+<body>
+
+<div style="position:absolute; top:70px;" id="menu">
+    <ul>
+
+        <li >
+            <a href="#/projects" >Projects</a>
+        </li>
+        <li >
+            <a href="#/employees" >Employees</a>
+        </li>
+        <li>
+            <a href="#/actions" >Actions</a>
+        </li>
+        <li>
+            <a href="#/defaulters" >Defaulters</a>
+        </li>
+        <li>
+            <a href="#/report" >Report</a>
+        </li>
+    </ul>
+</div>
+
+<div style="position:absolute; left:300px; top:10px; width: 80%; margin: 50px" ng-view></div>
+
+</body>
+</html>

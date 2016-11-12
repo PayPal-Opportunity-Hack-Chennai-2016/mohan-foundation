@@ -1,0 +1,42 @@
+<div>
+    <h2>Employee list</h2><br>
+    <div class="add-link">
+        <a href="#/employee/new">+ Add new employee</a><br><br>
+    </div>
+
+    <table class="list-table">
+        <thead>
+        <tr>
+            <th>Employee id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Project</th>
+            <th>View actions</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="employee in employeeDocuments">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.project}}</td>
+            <td>
+                <a href="#/employee-actions/employee/{{employee.id}}">View actions</a>
+            </td>
+            <td>
+                <a href="#/employee/update/{{employee._id}}">Update</a>
+            </td>
+            <td>
+                <button ng-click="deleteDocument('employee', employee._id)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div style="position:absolute; left:200px; top:30px; width: 1000px; margin: 50px; color: #FFF" ng-controller = "XLController">
+        <a style="color: #FFF" href="#/employee/import">+ Import from Excel</a>
+    </div>
+
+</div>
