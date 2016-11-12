@@ -2,6 +2,7 @@ package com.mohanfoundation.mohanfoundation;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,7 +16,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -25,16 +25,16 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btn_eye_banks = (Button)findViewById(R.id.btn_eye_banks);
-        Button btn_skin_banks = (Button)findViewById(R.id.btn_skin_banks);
-        Button btn_body_donation = (Button)findViewById(R.id.btn_body_donation);
-        Button btn_donation_hospitals = (Button)findViewById(R.id.btn_donation_hospitals);
-        Button btn_ngo_list = (Button)findViewById(R.id.btn_ngo_list);
-        Button btn_transplant_centres = (Button)findViewById(R.id.btn_transplant_centres);
+        Button btn_eye_banks = (Button) findViewById(R.id.btn_eye_banks);
+        Button btn_skin_banks = (Button) findViewById(R.id.btn_skin_banks);
+        Button btn_body_donation = (Button) findViewById(R.id.btn_body_donation);
+        Button btn_donation_hospitals = (Button) findViewById(R.id.btn_donation_hospitals);
+        Button btn_ngo_list = (Button) findViewById(R.id.btn_ngo_list);
+        Button btn_transplant_centres = (Button) findViewById(R.id.btn_transplant_centres);
 
-        TextView textView_faq =(TextView)findViewById(R.id.textView_faq);
-        TextView textView_join_members =(TextView)findViewById(R.id.textView_join_members);
-        TextView textView_pledge =(TextView)findViewById(R.id.textView_pledge);
+        TextView textView_faq = (TextView) findViewById(R.id.textView_faq);
+        TextView textView_join_members = (TextView) findViewById(R.id.textView_join_members);
+        TextView textView_pledge = (TextView) findViewById(R.id.textView_pledge);
 
         btn_eye_banks.setOnClickListener(this);
         btn_skin_banks.setOnClickListener(this);
@@ -67,8 +67,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent login_intent = new Intent(getApplicationContext(), CounselorLogin.class);
-
-
             startActivity(login_intent);
             return true;
         }
@@ -104,6 +102,27 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
 
                 break;
+            case R.id.textView_faq:
+                Intent FaqMain_intent = new Intent(getApplicationContext(), FaqMain.class);
+                startActivity(FaqMain_intent);
+
+                break;
+            case R.id.textView_pledge:
+                String join_member_url = "http://www.mohanfoundation.org/download_donorcard.asp";
+                Intent join_member_intent = new Intent(Intent.ACTION_VIEW);
+                join_member_intent.setData(Uri.parse(join_member_url));
+                startActivity(join_member_intent);
+
+
+                break;
+            case R.id.textView_join_members:
+                String pledge_url = "http://www.mohanfoundation.org/life-membership.asp";
+                Intent pledge_intent = new Intent(Intent.ACTION_VIEW);
+                pledge_intent.setData(Uri.parse(pledge_url));
+                startActivity(pledge_intent);
+
+                break;
+
         }
 
     }
