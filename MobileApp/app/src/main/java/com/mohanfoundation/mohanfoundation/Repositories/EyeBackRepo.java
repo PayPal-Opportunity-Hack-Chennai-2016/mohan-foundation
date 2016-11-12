@@ -2,11 +2,15 @@ package com.mohanfoundation.mohanfoundation.Repositories;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.mohanfoundation.mohanfoundation.DBhelper;
+import com.mohanfoundation.mohanfoundation.DataObjectEyeBank;
 import com.mohanfoundation.mohanfoundation.models.EyeBank;
 
+import java.security.Key;
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -55,6 +59,47 @@ public class EyeBackRepo {
 
         db.close(); // Closing database connection
         return (int) id;
+
+    }
+
+    public ArrayList<EyeBank> getDataSets()
+    {
+    //Open connection to read only
+    SQLiteDatabase db = dbHelper.getReadableDatabase();
+    String selectQuery = "SELECT  " +
+            EyeBank.KEY_email+ "," +
+            EyeBank.KEY_state + "," +
+            EyeBank.KEY_city + "," +
+            EyeBank.KEY_nameOfEyebank + "," +
+            EyeBank.KEY_phone + "," +
+            EyeBank.KEY_postalAddress +
+            " FROM " + EyeBank.TABLE+
+            "  ;";
+
+    //Student student = new Student();
+    ArrayList<EyeBank> eyeBankList = new ArrayList<>();
+
+    Cursor cursor = db.rawQuery(selectQuery, null);
+    // looping through all rows and adding to list
+
+    if (cursor.moveToFirst()) {
+        do {
+            EyeBank eyeBank = new EyeBank();
+            eyeBank.city= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_city));
+            eyeBank.state= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_state));
+            eyeBank.phone= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_phone));
+            eyeBank.postalAddress= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_postalAddress));
+            eyeBank.email= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_email));
+            eyeBank.nameOfEyebank= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_nameOfEyebank));
+
+            eyeBankList.add(eyeBank);
+
+        } while (cursor.moveToNext());
+    }
+
+    cursor.close();
+    db.close();
+    return eyeBankList;
 
     }
 }

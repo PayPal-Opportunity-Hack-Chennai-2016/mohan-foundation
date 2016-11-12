@@ -81,6 +81,9 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         switch (id) {
             case R.id.btn_eye_banks:
 
+                Intent eyebank_intent = new Intent(getApplicationContext(),EyeBankSearch.class);
+                startActivity(eyebank_intent);
+
                 break;
             case R.id.btn_skin_banks:
 

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="7dp"
+        card_view:contentPadding="@dimen/activity_horizontal_margin"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Puducherry"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/vertical1"
+                    android:layout_width="2dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/vertical_dotted"
+                    android:layerType="software" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/eyebank_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="EYE BANK DETAILS"
+                        />
+
+                    <View
+                        android:id="@+id/horizontal1"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_below="@+id/eyebank_text"
+                        android:layout_alignLeft="@+id/eyebank_text"
+                        android:layout_alignRight="@+id/eyebank_text"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/vertical2"
+                    android:layout_width="2dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/vertical_dotted"
+                    android:layerType="software" />
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Puducherry"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/horizontal2"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/row1"
+                android:background="@color/colorPrimaryDark"
+                android:layout_alignParentEnd="true" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/horizontal2">
+
+
+                <RelativeLayout
+                    android:id="@+id/currenc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/price_header"
+                        android:text=" "
+                        android:textSize="12sp"
+                        android:textColor="@color/login_button"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/price_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="email"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+
+                    <TextView
+                        android:id="@+id/eyebank_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/currency"
+                        android:layout_below="@+id/price_header"
+                        android:text="10002"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp">
+
+                    <TextView
+                        android:id="@+id/eyebank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoText="false"
+                        android:text="23FG23"
+                        android:layout_below="@+id/header"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NAME"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:text="Phone Numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eyebank_num"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimaryLight"/>
+
+            <TextView
+                android:text="(91)-413-2619100, 2619101, 2619102, 2619103, 2619104"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eyebank_number"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="10sp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:text="National Highway 45A, Cuddalore Main Road, Thavalakuppam, Puducherry 605007"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/eyebank_address"
+                android:textSize="10sp"
+                android:layout_marginBottom="32dp"
+                android:layout_above="@+id/eyebank_num"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
