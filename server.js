@@ -1,9 +1,8 @@
 // modules =================================================
 var express        = require('express');
 var app            = express();
-var mongoose       = require('mongoose');
 var bodyParser     = require('body-parser');
-var methodOverride = require('method-override');
+
 
 // configuration ===========================================
 	
@@ -28,3 +27,8 @@ require('./app/routes')(app); // pass our application into our routes
 app.listen(port);	
 console.log('Magic happens on port ' + port); 			// shoutout to the user
 exports = module.exports = app; 						// expose app
+
+app.post('/CreateUser', function (req,res) {
+    console.log("Hello world");
+    res.end();
+});
