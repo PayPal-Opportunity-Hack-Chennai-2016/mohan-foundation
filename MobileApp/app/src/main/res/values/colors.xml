@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#268126</color>
+    <color name="colorPrimaryLight">#608126</color>
+    <color name="colorPrimaryDark">#006400</color>
+    <color name="colorAccent">#99a599</color>
+    <color name="colorWhite">#f5f6f3</color>
+
+    <color name="login_button">#615499</color>
+    <color name="edit_text">#ffffff</color>
+    <color name="login_border">#000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="text_color">#cf266b</color>
+
+</resources>

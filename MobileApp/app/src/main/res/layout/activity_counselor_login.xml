@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorWhite"
+    tools:context=".CounselorLogin">
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edit_top_bg"
+        android:padding="17dp"
+        android:inputType="textPersonName"
+        android:textColorHint="#e2e0e0"
+        android:hint="@string/hintUser"
+        android:layout_below="@+id/SecondHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/info"
+        android:textColor="@color/login_button"
+        android:textStyle="bold"
+        android:id="@+id/registerLink"
+        android:layout_marginLeft="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/firstHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/login_screen_first_heading"
+        android:textSize="50sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="19sp"
+        android:text="@string/login_screen_second_heading"
+        android:textColor="@color/login_border"
+        android:padding="1dp"
+        android:id="@+id/SecondHeading"
+        android:layout_below="@+id/firstHeading"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edit_bottom_bg"
+        android:padding="17dp"
+        android:inputType="textPassword"
+        android:textColorHint="#e2e0e0"
+        android:hint="@string/hintPass"
+        android:layout_below="@+id/username"
+        android:layout_alignStart="@+id/username" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/password"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:layout_margin="21dp"
+            android:text="@string/login"
+            android:textColor="@color/edit_text"
+            android:textSize="20sp"
+            android:background="@drawable/button_bg"
+            android:onClick="navigateToCommentsPage"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/green_heart_icon"
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignEnd="@+id/SecondHeading" />
+
+</RelativeLayout>
+
