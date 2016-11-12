@@ -18,7 +18,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CounselorLogin"></activity>
+        <activity android:name=".CounselorLogin" />
+        <activity android:name=".FaqMain" />
+        <activity
+            android:name=".FaqBrainDead"
+            android:label="@string/title_activity_faq_brain_dead"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FaqLiver"
+            android:label="@string/title_activity_faq_liver"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FaqKidney"
+            android:label="@string/title_activity_faq_kidney"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FaqOrganDonation"
+            android:label="@string/title_activity_faq_organ_doantion"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
