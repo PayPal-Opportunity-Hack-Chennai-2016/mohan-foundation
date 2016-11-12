@@ -16,7 +16,7 @@ public class CounselorLogin extends AppCompatActivity{
 
     public void navigateToCommentsPage(View view) {
 
-        username = (EditText) findViewById(R.id.username);
+        username = (EditText) findViewById(R.id.eyebank_search_city);
         String name = username.getText().toString();
         password = (EditText) findViewById(R.id.password);
         String pass = password.getText().toString();

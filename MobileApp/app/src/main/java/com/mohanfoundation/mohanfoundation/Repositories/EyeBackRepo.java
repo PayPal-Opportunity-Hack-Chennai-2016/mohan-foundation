@@ -102,4 +102,46 @@ public class EyeBackRepo {
     return eyeBankList;
 
     }
+    public ArrayList<EyeBank> getSearchResultDataSet(String searchQuery)
+    {
+        //Open connection to read only
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String selectQuery = "SELECT  " +
+                EyeBank.KEY_email+ "," +
+                EyeBank.KEY_state + "," +
+                EyeBank.KEY_city + "," +
+                EyeBank.KEY_nameOfEyebank + "," +
+                EyeBank.KEY_phone + "," +
+                EyeBank.KEY_postalAddress +
+                " FROM " + EyeBank.TABLE+
+                " WHERE " +EyeBank.KEY_city+
+                " = '"+searchQuery+"';";
+
+
+        //Student student = new Student();
+        ArrayList<EyeBank> eyeBankList = new ArrayList<>();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        // looping through all rows and adding to list
+
+        if (cursor.moveToFirst()) {
+            do {
+                EyeBank eyeBank = new EyeBank();
+                eyeBank.city= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_city));
+                eyeBank.state= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_state));
+                eyeBank.phone= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_phone));
+                eyeBank.postalAddress= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_postalAddress));
+                eyeBank.email= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_email));
+                eyeBank.nameOfEyebank= cursor.getString(cursor.getColumnIndex(EyeBank.KEY_nameOfEyebank));
+
+                eyeBankList.add(eyeBank);
+
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return eyeBankList;
+
+    }
 }
