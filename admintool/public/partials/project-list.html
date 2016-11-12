@@ -1,0 +1,30 @@
+<div>
+<div ng-init="collection='project'"/>
+    <h2>Project list</h2>
+    <div class="add-link">
+        <a href="#/project/new">+ Add new project</a>
+    </div>
+
+    <table class="list-table">
+        <thead>
+        <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="project in projectDocuments">
+            <td>{{project.name}}</td>
+            <td>{{project.description}}</td>
+            <td>
+                <a href="#/project/update/{{project._id}}">Update</a><br><br>
+            </td>
+            <td>
+                <button ng-click="deleteDocument('project', project._id)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

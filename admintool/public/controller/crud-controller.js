@@ -6,7 +6,7 @@ crudControllerModule.factory('dataCache', function($cacheFactory) {
     });
 })
 
-crudControllerModule.controller('CRUDController', function($scope, $http, $routeParams, dataCache, collections) {
+crudControllerModule.controller('CRUDController', function($scope, $http,$location, $routeParams, dataCache, collections) {
 
     var updateDocumentId = $routeParams.id;
 
@@ -55,15 +55,18 @@ crudControllerModule.controller('CRUDController', function($scope, $http, $route
     }
 
 
-    $scope.addDocument = function(collectionName){
+        $scope.addDocument = function(collectionName){
         console.log("collectionName" + collectionName);
         //console.log($scope.test)
 
         var successCallback = function (response){
+            console.log(response)
             console.log("received success response for POST request, response :" + JSON.stringify(response));
             $scope.isAddDocumentSuccessful = true;
+
             $scope.isResponseReceivedFromServer = true;
             $scope.status = response.data;
+            $location.href='employees';
         }
         var errorCallback = function (response) {
             console.log("received error response for POST request, response :" + JSON.stringify(response));
@@ -106,6 +109,7 @@ crudControllerModule.controller('CRUDController', function($scope, $http, $route
     }
 
     $scope.deleteDocument = function(collectionName, id){
+        console.log(collectionName )
         $http.delete("/crud/rest/" + collectionName + "/" +id).success(function (response){
             console.log("received success response for DELETE request")
         refresh(true, collectionName);

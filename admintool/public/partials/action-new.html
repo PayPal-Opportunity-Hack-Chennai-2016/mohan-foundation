@@ -1,0 +1,38 @@
+<div xmlns="http://www.w3.org/1999/html" style="font-size: large">
+
+    <h2>Create new action</h2>
+    <div ng-if="isResponseReceivedFromServer" ng-init="isResponseReceivedFromServer=false" style="color: #10ff5c">
+        {{status.message}}
+    </div>
+    <br>
+
+    <label>Action name :</label>
+    <input style="padding-left: 10px" type="text" name="Action name" ng-model="document.name" >
+    <br><br>
+
+    <label>Active ? :</label>
+    <input style="padding-left: 10px" type="checkbox" name="Active ?" ng-model="document.active" >
+    <br><br>
+
+    <label>Last date:</label>
+    <input style="padding-left: 10px" type="date" name="Last date" ng-model="document.lastDate" >
+    <br><br>
+
+    <label>Assigned to :</label>
+    <select style="padding-left: 10px" type="text" name="Assigned to" ng-model="document.assignedTo" >
+        <option value="" selected>Select Project</option>
+        <option ng-repeat="project in projectDocuments" value="{{project.name}}">{{project.name}}</option>
+    </select>
+    <br><br>
+
+    <div class="add-new-row">
+        <a action-row ng-init="counter = 0">Click here to add new custom field</a>
+    </div>
+
+    <a class="back" href="#/actions">Back</a> &nbsp;&nbsp;
+    <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="addDocument('action')"> Submit</button>
+    <!--
+    //http://jsfiddle.net/fess81/axq5vu41/
+        //http://ng-learn.org/2014/01/Dom-Manipulations/
+    -->
+</div>

@@ -14,23 +14,22 @@ return {
 app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-        when('/employees', {
-            templateUrl: 'partials/employee-list.html',
+        when('/eyebanks', {
+            templateUrl: 'partials/eyebanks.html',
             controller: 'CRUDController',
-            resolve: resolveDetails(['employee', 'project'])
+            resolve: resolveDetails(['eyebank'])
         }).
-        // TODO why same controller for both list and new, refresh happens for employee-new also; same for action
-        when('/employee/new', {
-            templateUrl: 'partials/employee-new.html',
+        when('/eyebank/new', {
+            templateUrl: 'partials/eyebank-new.html',
             controller: 'CRUDController',
-            resolve: resolveDetails(['employee', 'project'])})
-        .when('/employee/import', {
-            templateUrl: 'partials/employee-import.html',
+            resolve: resolveDetails(['eyebank'])})
+        .when('/eyebank/import', {
+            templateUrl: 'partials/eyebank-import.html',
             controller: 'XLController'})
-        .when('/employee/update/:id', {
-            templateUrl: 'partials/employee-update.html',
+        .when('/eyebank/update/:id', {
+            templateUrl: 'partials/eyebank-update.html',
             controller: 'CRUDController',
-            resolve: resolveDetails(['employee', 'project'])})
+            resolve: resolveDetails(['eyebank'])})
         .when('/actions', {
             templateUrl: 'partials/action-list.html',
             controller: 'CRUDController',

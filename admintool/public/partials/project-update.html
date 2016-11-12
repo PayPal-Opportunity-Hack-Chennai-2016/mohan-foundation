@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/html" style="font-size: large">
+<!--http://blog.jdriven.com/2013/03/how-to-create-singleton-angularjs-services-in-4-different-ways/
+http://stackoverflow.com/questions/16607874/where-should-model-state-be-stored-in-angular-js
+-->
+
+  <h2>Update project</h2>
+<div ng-if="isResponseReceivedFromServer" ng-init="isResponseReceivedFromServer=false" style="color: #10ff5c">
+  {{status.message}}
+</div>
+    <br>
+
+
+    <label>Project name :</label>
+    <input style="padding-left: 10px" type="text" name="project name" ng-model="projectDocument.name" >
+    <br><br>
+
+    <label>Project description:</label>
+    <input style="padding-left: 10px" type="text" name="employee name" ng-model="projectDocument.description" >
+<br><br>
+
+    <a class="back" href="#/projects">Back</a> &nbsp;&nbsp;
+    <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="updateDocument('project')"> Submit</button>
+<!--
+//http://jsfiddle.net/fess81/axq5vu41/
+    //http://ng-learn.org/2014/01/Dom-Manipulations/
+-->
+</div>

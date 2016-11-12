@@ -1,0 +1,30 @@
+<div xmlns="http://www.w3.org/1999/html" style="font-size: large">
+    <label>view action</label><br><br>
+    <label>action name</label>
+    <input style="padding-left: 10px" type="text" name="action name" ng-model="action.name" >
+<br>
+    <label>active ?</label>
+    <input style="padding-left: 10px" type="checkbox" name="active ?" ng-model="action.active">
+    <br>
+    <label>last date :</label>
+    {{action.lastDate}}
+    <br>
+<label>assigned to : </label>
+
+    {{action.assignedTo}}
+<br>
+<br>
+    <div action-row>Add new row</div>
+    <br>
+    <br>
+
+    <a href="#/actions">Back</a> &nbsp;&nbsp;
+    <button style="width: 60px; height: 20px" ng-click="addAction()"> Submit</button><br><br>
+
+    <a href="http://localhost:5000/#/give-data/{{action._id}}">Direct link  for action performer</a>
+
+<!--
+//http://jsfiddle.net/fess81/axq5vu41/
+    //http://ng-learn.org/2014/01/Dom-Manipulations/
+-->
+</div>
