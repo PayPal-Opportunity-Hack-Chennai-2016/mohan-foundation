@@ -1,34 +1,54 @@
-// modules =================================================
-var express        = require('express');
-var app            = express();
-var bodyParser     = require('body-parser');
+var express = require('express');
+var app = express();
+app.use(express.static(__dirname + '/public'));//????????????
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 
-// configuration ===========================================
-	
-// config files
-var db = require('./config/db');
 
-var port = process.env.PORT || 8080; // set our port
-// mongoose.connect(db.url); // connect to our mongoDB database (commented out after you enter in your own credentials)
+app.use('/crud', require('./crud'));
+//app.use('/specific, require('./employee'));
 
-// get all data/stuff of the body (POST) parameters
-app.use(bodyParser.json()); // parse application/json 
-app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
-app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 
-app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
-app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
+//mongoUtilModule
+var mongoUtilModule = require('./modules/mongoutil');
+var mongoUtil = mongoUtilModule;
+mongoUtil.connectToServer(function(err) {
+        console.dir(err);
+    }
+);
 
-// routes ==================================================
-require('./app/routes')(app); // pass our application into our routes
+process.on('uncaughtException', function (err) {
+    console.log('Caught exception: ' + err);
+});
 
-// start app ===============================================
-app.listen(port);	
-console.log('Magic happens on port ' + port); 			// shoutout to the user
-exports = module.exports = app; 						// expose app
+app.get('/rest/list', function(req, res) {
+    console.log("received get request");
+    mongoUtil.getAllDocuments('employees', function(data){
+        res.end(JSON.stringify(data));
+    });
+});
 
-app.post('/CreateUser', function (req,res) {
-    console.log("Hello world");
+app.post('/rest', function(req, res) {
+    console.log("received post request :" + JSON.stringify(req.body));
+    mongoUtil.insertOneDocument('employees', req.body);
     res.end();
 });
+
+app.delete("/rest/:id", function(req, res) {
+    var id = req.params.id;
+    console.log("received DELETE request for " + id);
+    mongoUtil.deleteDocumentById('employees', id, function (err, results) {
+        console.log(err);
+        console.log(results);
+        res.end();
+    })
+});
+
+// Test purpose
+console.log(__dirname);
+//End Test purpose
+
+
+app.listen(8080);
+console.log("server listening at 8080");
