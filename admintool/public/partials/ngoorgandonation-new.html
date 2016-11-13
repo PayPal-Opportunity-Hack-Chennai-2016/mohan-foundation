@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/html" style="font-size: large">
 
-    <h2>Add new college</h2>
+    <h2>Add new NGO</h2>
     <div ng-if="isResponseReceivedFromServer" ng-init="isResponseReceivedFromServer=false" style="color: #10ff5c">
         {{status.message}}
     </div>
@@ -20,9 +20,9 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="ngoorgandonationname" class="col-sm-2 control-label">NGO Name</label>
+                <label for="ngoName" class="col-sm-2 control-label">NGO Name</label>
                 <div class="col-sm-4">
-                    <input class="form-control" id="ngoorgandonationname" ng-model="document.nameOfngoorgandonation" placeholder="ngoorgandonationName">
+                    <input class="form-control" id="ngoName" ng-model="document.ngoName" placeholder="ngoName">
                 </div>
             </div>
             <div class="form-group">
