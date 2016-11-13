@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.mohanfoundation.mohanfoundation.models.BodyDonation;
 import com.mohanfoundation.mohanfoundation.models.SkinBank;
+import com.mohanfoundation.mohanfoundation.models.TrasnplantHospital;
 
 
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
@@ -84,13 +85,13 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         switch (id) {
             case R.id.btn_eye_banks:
 
-                Intent eyebank_intent = new Intent(getApplicationContext(),EyeBankSearch.class);
-                startActivity(eyebank_intent);
+                Intent ngo_intent_first = new Intent(getApplicationContext(),NGOSearch.class);
+                startActivity(ngo_intent_first);
 
                 break;
             case R.id.btn_skin_banks:
-                Intent skinbank_intent = new Intent(getApplicationContext(),SkinBankSearch.class);
-                startActivity(skinbank_intent);
+                Intent ngo_intent_second = new Intent(getApplicationContext(),NGOSearch.class);
+                startActivity( ngo_intent_second);
 
 
                 break;
@@ -102,13 +103,18 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
                 break;
             case R.id.btn_donation_hospitals:
 
+                Intent trans_intent = new Intent(getApplicationContext(),TransplantSearch.class);
+                startActivity(trans_intent);
 
                 break;
             case R.id.btn_ngo_list:
-
+                Intent ngo_intent = new Intent(getApplicationContext(),NGOSearch.class);
+                startActivity(ngo_intent);
 
                 break;
             case R.id.btn_transplant_centres:
+                Intent donation_Hospital = new Intent(getApplicationContext(),DonationHospitalSearch.class);
+                startActivity(donation_Hospital);
 
 
                 break;
@@ -118,7 +124,8 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
                 break;
             case R.id.textView_pledge:
-
+                Intent intent= new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.mohanfoundation.org/download_donorcard.asp"));
+                startActivity(intent);
 
 
                 break;

@@ -12,12 +12,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.mohanfoundation.mohanfoundation.Repositories.EyeBackRepo;
+import com.mohanfoundation.mohanfoundation.Repositories.NgoListRepo;
 import com.mohanfoundation.mohanfoundation.models.EyeBank;
+import com.mohanfoundation.mohanfoundation.models.NGOlist;
 
 import java.util.ArrayList;
 
-public class SkinBankSearch extends AppCompatActivity {
-
+public class NGOSearch extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -57,7 +58,7 @@ public class SkinBankSearch extends AppCompatActivity {
 
                 if(lengthOfString>3)
                 {
-                    mAdapter = new MyRecyclerViewAdapterEyeBank(getSearchResultDataSet(searchQuery));
+                    mAdapter = new MyRecyclerViewAdapterEyeBank(getSearchResultDataSetCity(searchQuery));
                     mLayoutManager = new LinearLayoutManager(getApplicationContext());
                     mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -89,31 +90,32 @@ public class SkinBankSearch extends AppCompatActivity {
 
         ArrayList results = new ArrayList<>();
 
-        ArrayList<EyeBank> eyeBanksList = new ArrayList<>();
-        EyeBackRepo eyeBackRepo = new EyeBackRepo(getApplicationContext());
+        ArrayList<NGOlist> eyeBanksList = new ArrayList<>();
+        NgoListRepo eyeBackRepo = new NgoListRepo(getApplicationContext());
         eyeBanksList = eyeBackRepo.getDataSets();
 
-        for (EyeBank eyeBank : eyeBanksList) {
-            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfEyebank, eyeBank.postalAddress, eyeBank.phone);
+        for (NGOlist eyeBank : eyeBanksList) {
+            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfNgo, eyeBank.postalAddress, eyeBank.phone);
             results.add(dataObjectEyeBank);
         }
 
         return results;
     }
 
-    private ArrayList<DataObjectEyeBank> getSearchResultDataSet(String searchQuery) {
+    private ArrayList<DataObjectEyeBank> getSearchResultDataSetCity(String searchQuery) {
 
         ArrayList results = new ArrayList<>();
 
-        ArrayList<EyeBank> eyeBanksList = new ArrayList<>();
-        EyeBackRepo eyeBackRepo = new EyeBackRepo(getApplicationContext());
-        eyeBanksList = eyeBackRepo.getSearchResultDataSet(searchQuery);
+        ArrayList<NGOlist> eyeBanksList = new ArrayList<>();
+        NgoListRepo eyeBackRepo = new NgoListRepo(getApplicationContext());
+        eyeBanksList = eyeBackRepo.getSearchResultDataSetCity(searchQuery);
 
-        for (EyeBank eyeBank : eyeBanksList) {
-            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfEyebank, eyeBank.postalAddress, eyeBank.phone);
+        for (NGOlist eyeBank : eyeBanksList) {
+            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfNgo, eyeBank.postalAddress, eyeBank.phone);
             results.add(dataObjectEyeBank);
         }
 
         return results;
     }
+
 }

@@ -50,7 +50,7 @@
         android:layout_alignStart="@+id/btn_skin_banks" />
 
     <Button
-        android:text="@string/donation_hospital"
+        android:text="NGOs IN ORGAN DONATION"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/btn_ngo_list"
@@ -62,7 +62,7 @@
         android:layout_marginTop="12dp" />
 
     <Button
-        android:text="@string/ngo"
+        android:text="Donation Hospitals"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/btn_transplant_centres"

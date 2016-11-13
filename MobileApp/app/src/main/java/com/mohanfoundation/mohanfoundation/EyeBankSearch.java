@@ -6,7 +6,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.mohanfoundation.mohanfoundation.Repositories.EyeBackRepo;
 import com.mohanfoundation.mohanfoundation.models.EyeBank;
@@ -80,6 +83,8 @@ public class EyeBankSearch extends AppCompatActivity {
             }
 
         });
+
+
     }
 
     private ArrayList<DataObjectEyeBank> getDataSet() {

@@ -31,9 +31,9 @@
                     android:id="@+id/state"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Puducherry"
+                    android:text="Kidney"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="12sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <View
@@ -53,7 +53,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:text="EYE BANK DETAILS"
+                        android:text="DETAILS"
                         android:textSize="10sp" />
 
                     <View
@@ -82,7 +82,7 @@
                     android:layout_marginLeft="10dp"
                     android:text="Puducherry"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="12sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
 
@@ -128,7 +128,7 @@
             </LinearLayout>
 
             <TextView
-                android:text="Phone Numbers"
+                android:text="Numbers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/eyebank_num"
@@ -152,7 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/eyebank_address"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:layout_marginBottom="32dp"
                 android:layout_above="@+id/eyebank_num"
                 android:layout_centerHorizontal="true"
@@ -164,7 +164,7 @@
                 android:layout_height="wrap_content"
                 android:autoText="false"
                 android:text="23FG23"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold"
                 android:layout_weight="1"
