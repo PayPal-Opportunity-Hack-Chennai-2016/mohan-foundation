@@ -1,7 +1,7 @@
-    <div>
-    <h2>Eye banks</h2><br>
+<div>
+    <h2>Skin banks</h2><br>
 
-        <a href="#/eyebank/new">+ Add new eyebank</a><br><br>
+    <a href="#/skinbank/new">+ Add new skinbank</a><br><br>
 
 
     <div class="row">
@@ -15,25 +15,25 @@
 
                                 <th>State</th>
                                 <th>City</th>
-                                <th>EyeBank Name</th>
+                                <th>skinBank Name</th>
                                 <th>Contact</th>
                                 <th>Address</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr ng-repeat="bank in eyebankDocuments track by $index">
+                            <tr ng-repeat="bank in skinbankDocuments track by $index">
 
                                 <td>{{bank.state}}</td>
                                 <td>{{bank.city}}</td>
-                                <td>{{bank.nameOfEyebank}}</td>
+                                <td>{{bank.nameOfskinbank}}</td>
                                 <td>{{bank.phone}}</td>
                                 <td>{{bank.postalAddress}}</td>
                                 <td>
 
-                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[bank.$index]" ng-click="modifyEyebank(bank)"></span>
-                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[bank.$index]" ng-click="updateEyebank(bank)"></span>
-                                    <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('eyebank',bank._id)"></span>
+                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[bank.$index]" ng-click="modifyskinbank(bank)"></span>
+                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[bank.$index]" ng-click="updateskinbank(bank)"></span>
+                                    <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('skinbank',bank._id)"></span>
                                 </td>
                             </tr>
                             </tbody>
@@ -47,7 +47,7 @@
     </div>
 
     <div style="position:absolute; left:200px; top:30px; width: 1000px; margin: 50px; color: #FFF" ng-controller = "XLController">
-        <a href="#/eyebank/import">+ Import from Excel</a>
+        <a href="#/skinbank/import">+ Import from Excel</a>
     </div>
 
 </div>

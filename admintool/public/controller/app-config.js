@@ -30,7 +30,24 @@ app.config(['$routeProvider',
             templateUrl: 'partials/eyebank-update.html',
             controller: 'CRUDController',
             resolve: resolveDetails(['eyebank'])})
-        .when('/actions', {
+        .when('/skinbanks', {
+                templateUrl: 'partials/skinbanks.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['skinbank'])
+            }).
+        when('/skinbank/new', {
+            templateUrl: 'partials/skinbank-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['skinbank'])})
+            .when('/skinbank/import', {
+                templateUrl: 'partials/skinbank-import.html',
+                controller: 'XLController'})
+            .when('/skinbank/update/:id', {
+                templateUrl: 'partials/skinbank-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['skinbank'])})
+
+            .when('/actions', {
             templateUrl: 'partials/action-list.html',
             controller: 'CRUDController',
             resolve: resolveDetails(['action', 'project'])
