@@ -11,10 +11,10 @@ import android.widget.EditText;
 import com.mohanfoundation.mohanfoundation.Repositories.EyeBackRepo;
 import com.mohanfoundation.mohanfoundation.models.EyeBank;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class EyeBankSearch extends AppCompatActivity {
+public class SkinBankSearch extends AppCompatActivity {
+
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -113,5 +113,4 @@ public class EyeBankSearch extends AppCompatActivity {
 
         return results;
     }
-
 }

@@ -15,6 +15,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.mohanfoundation.mohanfoundation.models.BodyDonation;
+import com.mohanfoundation.mohanfoundation.models.SkinBank;
+
 
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
 
@@ -86,10 +89,14 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
                 break;
             case R.id.btn_skin_banks:
+                Intent skinbank_intent = new Intent(getApplicationContext(),SkinBankSearch.class);
+                startActivity(skinbank_intent);
 
 
                 break;
             case R.id.btn_body_donation:
+                Intent BodyDonation_intent = new Intent(getApplicationContext(),DonationBody.class);
+                startActivity(BodyDonation_intent);
 
 
                 break;
@@ -111,18 +118,13 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
                 break;
             case R.id.textView_pledge:
-                String join_member_url = "http://www.mohanfoundation.org/download_donorcard.asp";
-                Intent join_member_intent = new Intent(Intent.ACTION_VIEW);
-                join_member_intent.setData(Uri.parse(join_member_url));
-                startActivity(join_member_intent);
+
 
 
                 break;
             case R.id.textView_join_members:
-                String pledge_url = "http://www.mohanfoundation.org/life-membership.asp";
-                Intent pledge_intent = new Intent(Intent.ACTION_VIEW);
-                pledge_intent.setData(Uri.parse(pledge_url));
-                startActivity(pledge_intent);
+                Intent becomeMember_intent = new Intent(getApplicationContext(), BecomeAMember.class);
+                startActivity(becomeMember_intent);
 
                 break;
 

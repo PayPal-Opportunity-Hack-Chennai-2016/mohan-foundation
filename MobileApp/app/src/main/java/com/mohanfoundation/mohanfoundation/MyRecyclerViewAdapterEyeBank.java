@@ -24,7 +24,7 @@ public class MyRecyclerViewAdapterEyeBank extends RecyclerView.Adapter<MyRecycle
         TextView address;
         TextView name;
         TextView phonenumber;
-        TextView email;
+
 
 
         public DataObjectHolder(View itemView) {
@@ -34,7 +34,7 @@ public class MyRecyclerViewAdapterEyeBank extends RecyclerView.Adapter<MyRecycle
             address = (TextView) itemView.findViewById(R.id.eyebank_address);
             name=(TextView) itemView.findViewById(R.id.eyebank_name);
             phonenumber=(TextView) itemView.findViewById(R.id.eyebank_number);
-            email = (TextView) itemView.findViewById(R.id.eyebank_email);
+
 
             //itemView.setOnClickListener(this);
         }
@@ -70,7 +70,6 @@ public class MyRecyclerViewAdapterEyeBank extends RecyclerView.Adapter<MyRecycle
         holder.state.setText(mDataset.get(position).getState());
         holder.city.setText(mDataset.get(position).getCity());
         holder.name.setText(mDataset.get(position).getNameOfEyebank());
-        holder.email.setText(mDataset.get(position).getEmail());
         holder.phonenumber.setText(mDataset.get(position).getPhone());
         holder.address.setText(mDataset.get(position).getPostalAddress());
 

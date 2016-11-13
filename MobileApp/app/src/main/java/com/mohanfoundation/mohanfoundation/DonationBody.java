@@ -8,13 +8,15 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
+import com.mohanfoundation.mohanfoundation.Repositories.BodyDonationRepo;
 import com.mohanfoundation.mohanfoundation.Repositories.EyeBackRepo;
+import com.mohanfoundation.mohanfoundation.models.BodyDonation;
 import com.mohanfoundation.mohanfoundation.models.EyeBank;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class EyeBankSearch extends AppCompatActivity {
+public class DonationBody extends AppCompatActivity {
+
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -86,12 +88,12 @@ public class EyeBankSearch extends AppCompatActivity {
 
         ArrayList results = new ArrayList<>();
 
-        ArrayList<EyeBank> eyeBanksList = new ArrayList<>();
-        EyeBackRepo eyeBackRepo = new EyeBackRepo(getApplicationContext());
+        ArrayList<BodyDonation> eyeBanksList = new ArrayList<>();
+        BodyDonationRepo eyeBackRepo = new BodyDonationRepo(getApplicationContext());
         eyeBanksList = eyeBackRepo.getDataSets();
 
-        for (EyeBank eyeBank : eyeBanksList) {
-            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfEyebank, eyeBank.postalAddress, eyeBank.phone);
+        for (BodyDonation eyeBank : eyeBanksList) {
+            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfBodydonation, eyeBank.postalAddress, eyeBank.phone);
             results.add(dataObjectEyeBank);
         }
 
@@ -102,16 +104,15 @@ public class EyeBankSearch extends AppCompatActivity {
 
         ArrayList results = new ArrayList<>();
 
-        ArrayList<EyeBank> eyeBanksList = new ArrayList<>();
-        EyeBackRepo eyeBackRepo = new EyeBackRepo(getApplicationContext());
+        ArrayList<BodyDonation> eyeBanksList = new ArrayList<>();
+        BodyDonationRepo eyeBackRepo = new BodyDonationRepo(getApplicationContext());
         eyeBanksList = eyeBackRepo.getSearchResultDataSet(searchQuery);
 
-        for (EyeBank eyeBank : eyeBanksList) {
-            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfEyebank, eyeBank.postalAddress, eyeBank.phone);
+        for (BodyDonation eyeBank : eyeBanksList) {
+            DataObjectEyeBank dataObjectEyeBank = new DataObjectEyeBank(eyeBank.state, eyeBank.city, eyeBank.nameOfBodydonation, eyeBank.postalAddress, eyeBank.phone);
             results.add(dataObjectEyeBank);
         }
 
         return results;
     }
-
 }

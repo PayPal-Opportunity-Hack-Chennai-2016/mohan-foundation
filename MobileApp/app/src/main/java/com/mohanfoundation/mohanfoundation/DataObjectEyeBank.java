@@ -9,16 +9,16 @@ public class DataObjectEyeBank {
     private String nameOfEyebank;
     private String postalAddress;
     private String phone;
-    private String email;
 
 
-    DataObjectEyeBank(String state, String city, String nameOfEyebank, String postalAddress, String phone, String email) {
+
+    DataObjectEyeBank(String state, String city, String nameOfEyebank, String postalAddress, String phone) {
         this.state = state;
         this.city = city;
         this.nameOfEyebank = nameOfEyebank;
         this.postalAddress = postalAddress;
         this.phone = phone;
-        this.email = email;
+
     }
 
     public String getState() {
@@ -61,11 +61,4 @@ public class DataObjectEyeBank {
         this.phone = phone;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-}
+   }
