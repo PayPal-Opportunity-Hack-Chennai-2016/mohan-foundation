@@ -1,0 +1,26 @@
+
+<div>
+    <h3>Select action name</h3>&nbsp;
+<select ng-model="selectedActionId">
+    <option ng-repeat="action in actions" value="{{action._id}}">{{action.name}}</option>
+</select>&nbsp;
+    <button ng-click="showReport()">Go</button><br><br>
+    <div>
+        <h2>Report</h2><br>
+        <table class="list-table">
+            <thead>
+            <tr>
+                <th>Employee-id</th>
+                <th ng-repeat="(key, value) in report[0].fields">{{key}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="employeeData in report">
+                <td>{{employeeData.employeeId}}</td>
+                <td ng-repeat="(key, value) in employeeData.fields">{{value}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

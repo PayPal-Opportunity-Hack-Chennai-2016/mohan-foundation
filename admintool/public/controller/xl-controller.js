@@ -18,9 +18,9 @@ xlControllerModule.directive('fileModel', ['$parse', function ($parse) {
 
 
 xlControllerModule.controller('XLController', function($scope, $http, $routeParams) {
-    $scope.uploadFile = function(){
+    $scope.uploadFile = function(document){
         var file = $scope.myFile;
-        var uploadUrl = "/employee/export";
+        var uploadUrl = "/export" + "/export" + "/" + document;
         uploadFileToUrl(file, uploadUrl);
     }
 

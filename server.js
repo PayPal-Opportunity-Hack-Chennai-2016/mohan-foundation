@@ -7,6 +7,8 @@ app.use(bodyParser.json());
 
 
 app.use('/crud', require('./apis/crud'));
+app.use('/export', require('./apis/exportXL'));
+
 //app.use('/specific, require('./employee'));
 
 

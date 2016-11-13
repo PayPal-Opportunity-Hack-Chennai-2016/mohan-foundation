@@ -14,24 +14,56 @@ return {
 app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-        when('/employees', {
-            templateUrl: 'partials/employee-list.html',
+        when('/eyebanks', {
+            templateUrl: 'partials/eyebanks.html',
             controller: 'CRUDController',
-            resolve: resolveDetails(['employee', 'project'])
+            resolve: resolveDetails(['eyebank'])
         }).
-        // TODO why same controller for both list and new, refresh happens for employee-new also; same for action
-        when('/employee/new', {
-            templateUrl: 'partials/employee-new.html',
+        when('/eyebank/new', {
+            templateUrl: 'partials/eyebank-new.html',
             controller: 'CRUDController',
-            resolve: resolveDetails(['employee', 'project'])})
-        .when('/employee/import', {
-            templateUrl: 'partials/employee-import.html',
+            resolve: resolveDetails(['eyebank'])})
+        .when('/eyebank/import', {
+            templateUrl: 'partials/eyebank-import.html',
             controller: 'XLController'})
-        .when('/employee/update/:id', {
-            templateUrl: 'partials/employee-update.html',
+        .when('/eyebank/update/:id', {
+            templateUrl: 'partials/eyebank-update.html',
             controller: 'CRUDController',
-            resolve: resolveDetails(['employee', 'project'])})
-        .when('/actions', {
+            resolve: resolveDetails(['eyebank'])})
+        .when('/skinbanks', {
+                templateUrl: 'partials/skinbanks.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['skinbank'])
+            }).
+        when('/skinbank/new', {
+            templateUrl: 'partials/skinbank-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['skinbank'])})
+            .when('/skinbank/import', {
+                templateUrl: 'partials/skinbank-import.html',
+                controller: 'XLController'})
+            .when('/skinbank/update/:id', {
+                templateUrl: 'partials/skinbank-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['skinbank'])})
+            .when('/transplantcentres', {
+                templateUrl: 'partials/transplantcentres.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['transplantcentre'])
+            }).
+        when('/transplantcentre/new', {
+            templateUrl: 'partials/transplantcentre-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['transplantcentre'])})
+            .when('/transplantcentre/import', {
+                templateUrl: 'partials/transplantcentre-import.html',
+                controller: 'XLController'})
+            .when('/transplantcentre/update/:id', {
+                templateUrl: 'partials/transplantcentre-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['transplantcentre'])})
+
+            .when('/actions', {
             templateUrl: 'partials/action-list.html',
             controller: 'CRUDController',
             resolve: resolveDetails(['action', 'project'])
