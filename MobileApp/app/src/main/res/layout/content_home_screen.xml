@@ -5,9 +5,9 @@
     android:id="@+id/content_home_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.mohanfoundation.mohanfoundation.HomeScreen"
@@ -85,32 +85,44 @@
         android:layout_below="@+id/btn_transplant_centres"
         android:layout_alignStart="@+id/btn_transplant_centres" />
 
-    <TextView
-        android:text="@string/join_members"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_join_members"
-        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:text="@string/faq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_faq"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:text="FAQ\'s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_faq"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="26dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="@string/pledge_your_organ"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView_pledge"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/btn_donation_hospitals"
-        android:layout_marginStart="24dp" />
+        <TextView
+                android:text="@string/join_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_join_members"
+                android:textColor="@color/colorWhite"
+            android:layout_alignBaseline="@+id/textView_pledge"
+            android:layout_alignBottom="@+id/textView_pledge"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp" />
+
+        <TextView
+            android:text="@string/pledge_your_organ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView_pledge"
+            android:textColor="@color/colorWhite"
+            android:layout_marginEnd="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/textView_join_members" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
