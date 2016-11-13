@@ -1,15 +1,16 @@
 <resources>
-    <string name="app_name">Mohan Foundation</string>
-    <string name="action_settings">Counselor Login</string>
+    <string name="app_name">Organ Donation India</string>
+    <string name="app_display_name">Organ Donation India</string>
+    <string name="counselor">Counsellor Login</string>
     <string name="eye_bank">Eye Banks</string>
     <string name="skin_bank">Skin Banks</string>
     <string name="body_donation">Body Donation</string>
     <string name="donation_hospital">Donation Hospitals</string>
     <string name="ngo">NGOs in Organ Donation</string>
     <string name="transplant_center">Transplant Centres</string>
-    <string name="faq">FAQs</string>
+    <string name="faq">FAQ\'s</string>
     <string name="pledge_your_organ">Pledge your organs</string>
-    <string name="join_members">Join Members</string>
+    <string name="join_members">Become a Member</string>
     <string name="hintUser">UserName</string>
     <string name="hintPass">Password</string>
     <string name="login">SIGN IN</string>
@@ -17,6 +18,183 @@
     <string name="register">Register</string>
     <string name="login_screen_second_heading">DONATION</string>
     <string name="login_screen_first_heading">ORGAN</string>
-    <string name="app_logo">&#xf1d8;</string>
+    <string name="title_activity_faq_brain_dead">Brain Dead</string>
+    <string name="large_text">
+
+        "1. When is a patient declared dead?\n\n"
+        "A person may be declared dead due to Cardiac Arrest or due to Brain Death.\n\n\"
+
+        "2. What is brain death?\n\n"
+        "The main causes of brain death are tumor in the brain, trauma, and intra-cerebral hemorrhage. The brain stem which is at the base of our brain stops functioning. This means that the person cannot breathe on his own and his heart will stop beating. Brain death is irreversible.\n\n"
+
+        "3. What tests are done to confirm irreversible damage to brain stem?\n\n "
+        "There are a series of clinical tests listed in the Transplantation of Human Organs Act that the doctors perform. These tests are basically to confirm that there is irreversible damage to the brain stem and involve cranial nerve testing and apnea testing.\n\n"
+        "The protocol of brain death declaration to proclaim death is the same - organ donation or no organ donation. Time of death is second apnoea test.\n\n"
+
+        "4. Who explains to the family about the brain death?\n\n "
+        "The doctor (Intensivist/ neurologist/neurosurgeon) who is treating the patient will explain to the family about brain death. The family can approach the grief counselor of the hospital, the transplant coordinator and nursing staff of the ICU for clarifications about brain death. They can approach NGOs who deal with organ donation for help.\n\n"
+
+        "5. Why can organs of a brain dead patient be used for transplantation and not those of a patient who has died of a cardiac arrest?\n\n\"
+        "Solid organ donation (heart, lungs, liver, pancreas, kidneys) requires blood circulation to be maintained in these organs until retrieval. This is possible only in brain death where the functioning of these organs can be supported for some time.\n\n"
+
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_faq_liver">Liver</string>
+    <string name="large_text_liver">
+
+
+       "1.	What are the functions of Liver\n\n"
+
+"Liver has multiple functions there are :\n\n"
+"• Synthesis of bile, glycogen, blood protiens, lipids.\n"
+"• Regulation of amino acids levels in blood and blood clotting.\n"
+"• Detoxicification of medicine, alcohol.\n"
+"• Storage of fat soluble vitamins, iron and copper.\n"
+"• Excretion of excess bile salts and biulirubin\n\n"
+
+
+"2.	What important functions are affected by severe, acute, or chronic liver disease?\n\n"
+"Blood clotting, Elimination of water, salt, drugs, and toxins from the body and Manufacture of blood proteins get affected due to liver disease.\n\n"
+
+"3.	What is MELD ?\n\n"
+"It is a method for allocation of  liver from a deceased donor. Model for End-Stage Liver Disease (MELD) score ranges from 6 to 40. The doctors calculate the  score based on clinical  criteria.  Livers are allocated based on MELD scores. People with higher MELD scores generally are offered donated livers first..\n\n"
+
+"4.	Who may be Considered as a Living Donor Liver Transplantation?\n\n"
+"Any person between the ages of 18-50 can donate a portion of his liver provided it is compatible to the recipent. Tranplant  surgeon  prefer close relatives as donors. The donor should not suffer from heart disease, kidney disease, liver disease and cancer. The donor should have negative  viral markers for HIV/HBsAg and HCV.\n\n"
+
+"5.	What is the time period for recovery after liver transplantation in the intensive care unit in the hospital?\n\n"
+
+"A liver transplant recipient will be in intensive care to minimum of a week monitored 24hrs and it may also vary according to the health level of that person. The recipient will be discharged only after fitness to stay without the need of medical team.\n\n"
+
+"6.	Can  a living relative be a liver donor ?\n\n"
+"A healthy family member who is willing to donate a part of his/ her liver can donate if the liver matches. Usually it may be parents, sibling, children, and grandparents. It also enfolds certain legal procedures and approval from an Authorisation committee.\n\n"
+
+
+
+
+    </string>
+    <string name="title_activity_faq_kidney">Kidney</string>
+
+    <string name="large_text_kidney">
+
+
+        "1.How can I register for a kidney transplant?\n\n"
+        "Approach a government approved transplant hospital, register in that hospital on the transplant waiting list. The hospital will have a transplant coordinator who will assist you in registering under the State Authority of Cadaver Transplant Program. There will be some fees to be paid in demand draft to the State Authority. Once you are registered you will receive a waitlist number and you can check your status online. You cannot register in more than one hospital in one state\n\n"
+
+        "2.	If I join MOHAN Foundation will you be able to find a kidney for me?\n\n"
+        "No, MOHAN Foundation will not be able to find a kidney for you but we will guide you on how to register in a hospital and be put on the cadaver kidney waiting list.\n\n"
+
+        "3.	What is the punishment for buying, selling and assisting in kidney procurement?\n\n"
+        "THO 2011 Amendment has increased the punishment. Commercial dealing in organs, falsification of documents:  5 – 10 years imprisonment and Rs. 20 Lakh – 1 crore in penalty.\n\n"
+        "4.	I am giving a kidney to my sister/brother what tests will I have to undertake? \n\n"
+
+        "The family member who requires a kidney should be registered with a kidney transplant hospital. The doctors there will advise you on how to go ahead. As a donor, your blood will be tested (HLA typing) to establish that you are related to the recipient and are compatible. You should be in good physical and emotional health.\n\n"
+
+        "You will have a thorough medical, surgical and psychological assessment to establish that you are fit and healthy to donate. A number of people who wish to donate find that they are not able to do so because health problems are discovered through the assessment process.\n\n"
+
+        "5.	How can I get a kidney for my friend?\n\n"
+        "There are three types of kidney donation.\n\n"
+        "LIVE RELATED DONATION:  Living donation takes place when a living person donates an organ (or part of an organ) for transplantation to another person. The living donor can be a family member, such as a parent, child, brother or sister, grandparent or grandchild (living related donation).\n\n"
+        "LIVE UNRELATED DONATION: Living donation can also come from someone who is emotionally related to the recipient, such as a good friend, a relative, a neighbour or an in-law (living unrelated donation).\n\n"
+        "DECEASED ORGAN DONATION: The patient has to register in a hospital that does kidney transplants. The patient will be put on a kidney waitlist. As and when a kidney from an appropriate deceased donor (brain death) is available, the patient will be intimated.\n\n"
+        "The hospital where the transplant will take place will have a qualified transplant coordinator who will guide the patient in the process.\n\n"
+
+
+
+
+    </string>
+    <string name="title_activity_faq_organ_doantion">Organ Donation</string>
+
+     <string name="large_text_organ_donation">
+
+
+"1. What organs and tissues can be donated?\n\n"
+"Currently, the following organs can be donated and transplanted:\n"
+"Heart,Liver, Kidneys, Lungs, Pancreas and  Intestines\n "
+"Tissues that can be donated are:\n"
+"Cornea, Skin, Heart Valves and Bones\n"
+
+
+"2. Who can be organ donors?\n\n"
+"Every adult can be an organ donor.   Children can be organ donors as well provided the parents give consent.  A donor can donate the following:\n"
+"•	upto 100 years : Corneas, skin\n"
+"•	Upto 70 years  :  Kidneys, liver\n"
+"•	Upto 50 years – Heart, lungs\n"
+"•	Upto 40 years – Heart valves\n"
+
+
+"3. How do I pledge to become a donor?\n\n"
+
+"Either in the case of brain death, or when a individual suffers a cardiac arrest, individuals may share the gift of life with others through solid organ and tissue donation.\n\n"
+
+"You may pledge to donate your organs by signing and carrying a donor card (available on MOHAN Foundation website). It's also important to tell your family that you want to be a donor. Even if there is documentation that a person was a designated donor, the consent of the family is essential for the organs or tissues to be donated. Hospitals seek consent from the next of kin before taking any action.\n\n"
+
+"The Transplantation of Human Organs Act (1994) and its Amendment (2011) allows the donation of organ and tissues for therapeutic purpose only.   The Form 5 of the THO Rules 1995 is the donor card. And Forms 6 and/or 9 are consent forms that the next of kin has to sign before  organs/tissues can be retrieved.\n\n"
+
+"4. Will my family have to pay for the donation?\n\n"
+"No. The family of an organ or tissue donor is never responsible for costs related to donation. Your family will be only charged for the cost of all final efforts to save your life.\n"
+"A road traffic accident is the most common cause of brain death in India. The victim is taken to the emergency ward and then into ICU. The cost of the treatment during these crucial times is charged to the patient. Once brain death has been certified and the patient’s family has given consent for organ donation,  the costs incurred towards organ retrieval do not go to the patient.\n"
+
+"5. Can I sell my organs?\n\n"
+"No. The Transplantation of Human Organs Act makes it ILLEGAL to buy or sell human organs and tissues. Violators are subject to fines and imprisonment.\n"
+"You may feel that selling an organ is your only option and that after selling your organ yours debts will be settled and you can start afresh.  But studies have shown that those who have sold their organs in exchange of money to lessen their debt have not done well at all.\n"
+
+
+"Offence under Section 19\n\n"
+"Whoever\n"
+">>	Makes or receives any payment for the supply of, or for an offer to supply, any human organ\n"
+">>	Seeks to find  a person willing to supply for payment any human organ\n"
+">>	Offers to supply any human organ for payment.\n"
+">>	Initiates or negotiates any arrangement of payment related to organ donation.\n"
+">>	Any advertisement related to inviting persons to supply or offering to supply for payment of any human organ.\n"
+">>	Preparation or submission of false documents related to organ donation.\n\n"
+
+"Penalty under THOA 1994 Enhanced\n\n"
+"Shall be punishable with imprisonment for a term which shall not be less than 2 years but which may extend to 7 years and fine amount of 10000 which may extend to 20000 rupees.\n"
+
+"Penalty under Amendment 2011\n\n"
+"Shall be punishable with imprisonment for a term which shall not be less than five years but which may extend to ten years and shall be liable to fine which shall not be less than twenty lakh rupees but may extend to one crore rupees\n"
+ </string>
+    <string name="title_activity_become_amember">Become A Member</string>
+ <string name="large_text_become_a_member" formatted="false">
+     "\n\n\n"
+"<b><u>Become a Life Member and Help Us in Saving Lives</u></b>\n\n\n"
+
+"MOHAN Foundation has helped save over 5000 lives through organ and tissue donations. It has helped give momentum to organ donation programme through advocacy, capacity building, conducting workshops and counselling and supporting organ donation families.\n"
+
+
+"All our services are rendered free. We are guided by the Transplantation of Human Organs Act, 1994, where no organ can be bought or sold. Hence, we do not pay anything to the organ donor family or do not receive any monetary benefit from the recipients. We survive purely on the philanthropy of the community.\n"
+
+
+"Recognizing the important work that we have undertaken, we have re-ceived support from philanthropically minded individuals, corporate donors, and trusts. We have a 50% tax exemption status under Section 80G and a 100% tax exemption status under Section 35AC of Income Tax Act, 1961. We are approved recipients of foreign contributions under the Foreign Contribution Regulation (FCRA) Act, 1976.\n"
+
+
+"Receive a Life Membership Kit for Organ Donation Advocacy - \n"
+
+"1)A Life Membership certificate from MOHAN Foundation office.\n"
+
+"2)Ten (10) Organ Donor Cards.\n"
+
+"3)Five (5) brochures of Life Pass It On.\n"
+
+"4)Two (2) Organ Donation posters.\n"
+
+"5)CD of 20 slides on Organ Donation with list of 100 FAQ\'s for public advocacy.\n"
+
+"6)Regular e-newsletters of our activities.\n"
+
+"7)Discounts for all our paid fund-raising events.\n"
+
+"8)A T-Shirt on organ donation.\n"
+
+"9)Premium Membership to our website where you can access all our material.\n"
+
+"10)Organ Donation Ribbon.\n"
+
+"11)Organ Donation Badge.\n"
+
+     "<b>CLICK ON THE STAR TO BECOME A MEMBER</b>"
+ </string>
+
 
 </resources>

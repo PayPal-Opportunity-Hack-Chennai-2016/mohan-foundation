@@ -1,0 +1,30 @@
+
+<div>
+    <h3>Select action name</h3>&nbsp;
+<select ng-model="selectedActionId">
+    <option ng-repeat="action in actions" value="{{action._id}}">{{action.name}}</option>
+</select>&nbsp;
+    <button ng-click="showDefaulters()">Go</button><br><br>
+    <div>
+        <h2>Defaulters</h2><br>
+        <table class="list-table">
+            <thead>
+            <tr>
+                <th>Employee id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Project</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="employee in defaulters">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.project}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

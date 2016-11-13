@@ -2,6 +2,7 @@ package com.mohanfoundation.mohanfoundation;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +15,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.mohanfoundation.mohanfoundation.models.BodyDonation;
+import com.mohanfoundation.mohanfoundation.models.SkinBank;
 
 
 public class HomeScreen extends AppCompatActivity implements View.OnClickListener {
@@ -25,16 +28,16 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btn_eye_banks = (Button)findViewById(R.id.btn_eye_banks);
-        Button btn_skin_banks = (Button)findViewById(R.id.btn_skin_banks);
-        Button btn_body_donation = (Button)findViewById(R.id.btn_body_donation);
-        Button btn_donation_hospitals = (Button)findViewById(R.id.btn_donation_hospitals);
-        Button btn_ngo_list = (Button)findViewById(R.id.btn_ngo_list);
-        Button btn_transplant_centres = (Button)findViewById(R.id.btn_transplant_centres);
+        Button btn_eye_banks = (Button) findViewById(R.id.btn_eye_banks);
+        Button btn_skin_banks = (Button) findViewById(R.id.btn_skin_banks);
+        Button btn_body_donation = (Button) findViewById(R.id.btn_body_donation);
+        Button btn_donation_hospitals = (Button) findViewById(R.id.btn_donation_hospitals);
+        Button btn_ngo_list = (Button) findViewById(R.id.btn_ngo_list);
+        Button btn_transplant_centres = (Button) findViewById(R.id.btn_transplant_centres);
 
-        TextView textView_faq =(TextView)findViewById(R.id.textView_faq);
-        TextView textView_join_members =(TextView)findViewById(R.id.textView_join_members);
-        TextView textView_pledge =(TextView)findViewById(R.id.textView_pledge);
+        TextView textView_faq = (TextView) findViewById(R.id.textView_faq);
+        TextView textView_join_members = (TextView) findViewById(R.id.textView_join_members);
+        TextView textView_pledge = (TextView) findViewById(R.id.textView_pledge);
 
         btn_eye_banks.setOnClickListener(this);
         btn_skin_banks.setOnClickListener(this);
@@ -67,8 +70,6 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Intent login_intent = new Intent(getApplicationContext(), CounselorLogin.class);
-
-
             startActivity(login_intent);
             return true;
         }
@@ -83,12 +84,19 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
         switch (id) {
             case R.id.btn_eye_banks:
 
+                Intent eyebank_intent = new Intent(getApplicationContext(),EyeBankSearch.class);
+                startActivity(eyebank_intent);
+
                 break;
             case R.id.btn_skin_banks:
+                Intent skinbank_intent = new Intent(getApplicationContext(),SkinBankSearch.class);
+                startActivity(skinbank_intent);
 
 
                 break;
             case R.id.btn_body_donation:
+                Intent BodyDonation_intent = new Intent(getApplicationContext(),DonationBody.class);
+                startActivity(BodyDonation_intent);
 
 
                 break;
@@ -104,7 +112,49 @@ public class HomeScreen extends AppCompatActivity implements View.OnClickListene
 
 
                 break;
+            case R.id.textView_faq:
+                Intent FaqMain_intent = new Intent(getApplicationContext(), FaqMain.class);
+                startActivity(FaqMain_intent);
+
+                break;
+            case R.id.textView_pledge:
+
+
+
+                break;
+            case R.id.textView_join_members:
+                Intent becomeMember_intent = new Intent(getApplicationContext(), BecomeAMember.class);
+                startActivity(becomeMember_intent);
+
+                break;
+
         }
+
+    }
+
+    public void exitAppMethod() {
+
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+
+                .setTitle("Really Exit?")
+                .setMessage("Press Ok to Exit")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        exitAppMethod();
+                    }
+                }).create().show();
+
 
     }
 }

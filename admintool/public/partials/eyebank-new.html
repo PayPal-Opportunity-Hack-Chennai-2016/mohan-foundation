@@ -1,0 +1,52 @@
+<div xmlns="http://www.w3.org/1999/html" style="font-size: large">
+
+  <h2>Create new eye bank</h2>
+    <div ng-if="isResponseReceivedFromServer" ng-init="isResponseReceivedFromServer=false" style="color: #10ff5c">
+        {{status.message}}
+    </div>
+    <br>
+    <div class="container">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="statename" class="col-sm-2 control-label">State</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="statename" ng-model="document.state" placeholder="State Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cityname" class="col-sm-2 control-label">City</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="cityname" ng-model="document.city" placeholder="City Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="eyebankname" class="col-sm-2 control-label">EyeBank Name</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="eyebankname" ng-model="document.nameOfEyebank" placeholder="EyeBankName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contact" class="col-sm-2 control-label">Contact No</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="contact" ng-model="document.phone" placeholder="Contact No">
+                </div>
+            </div>  <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-4">
+                <input class="form-control" id="address" ng-model="document.postalAddress" placeholder="Address">
+            </div>
+        </div>
+
+            <div class="form-group">
+
+                <a class="back" href="#/eyebanks">Back</a> &nbsp;&nbsp;
+                <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="addDocument('eyebank')"> Submit</button>
+            </div>
+        </form>
+
+<!--
+//http://jsfiddle.net/fess81/axq5vu41/
+    //http://ng-learn.org/2014/01/Dom-Manipulations/
+-->
+</div>
+</div>

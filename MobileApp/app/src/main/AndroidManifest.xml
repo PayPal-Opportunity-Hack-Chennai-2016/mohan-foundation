@@ -2,14 +2,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mohanfoundation.mohanfoundation">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/green_heart_icon"
-        android:label="@string/app_name"
+        android:label="@string/app_display_name"
+        android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".HomeScreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CounselorLogin" />
+        <activity android:name=".FaqMain" />
+        <activity
+            android:name=".FaqBrainDead"
+            android:label="@string/title_activity_faq_brain_dead"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FaqLiver"
+            android:label="@string/title_activity_faq_liver"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FaqKidney"
+            android:label="@string/title_activity_faq_kidney"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FaqOrganDonation"
+            android:label="@string/title_activity_faq_organ_doantion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".StartScreen"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -18,7 +43,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CounselorLogin"></activity>
+        <activity android:name=".EyeBankSearch" />
+        <activity
+            android:name=".BecomeAMember"
+            android:label="@string/title_activity_become_amember"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SkinBankSearch" />
+        <activity android:name=".DonationBody" />
+        <activity android:name=".AddComments"></activity>
     </application>
 
 </manifest>

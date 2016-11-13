@@ -1,0 +1,14 @@
+<div ng-if="isResponseReceivedFromServer" ng-init="isResponseReceivedFromServer=false" style="color: #10ff5c">
+    {{status.message}}
+</div>
+
+<div style="position:absolute; left:200px; top:30px; width: 1000px; margin: 50px">
+    <input type = "file" file-model = "myFile"/>
+    {{myFile}}
+    <button ng-click = "uploadFile('skinbank')">Upload</button>
+</div>
+<br>
+<a style="position: absolute; top:150px" class="back" href="#/skinbanks">Back</a> &nbsp;&nbsp;
+
+
+

@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "description": "server for tracker",
+  "version": "0.0.1",
+  "author": {
+    "name": "bharath kumar chennupati",
+    "email": "chennupati.bharath@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "bharath kumar chennupati",
+      "email": "chennupati.bharath@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "angular-file-upload": "^2.2.0",
+    "body-parser": "^1.14.1",
+    "excel-export": "^0.5.1",
+    "exceljs": "^0.2.4",
+    "express": "^4.13.3",
+    "formidable": "^1.0.17",
+    "mangojs": "0.0.2",
+    "mongodb": "^2.0.48",
+    "xls-to-json": "^0.3.2",
+    "xlsx-to-json": "^0.2.4"
+  }
+}
