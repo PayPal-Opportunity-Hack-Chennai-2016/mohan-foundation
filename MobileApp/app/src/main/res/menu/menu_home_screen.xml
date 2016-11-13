@@ -7,4 +7,5 @@
         android:orderInCategory="100"
         android:title="@string/counselor"
         app:showAsAction="never" />
-</menu>
+
+    </menu>

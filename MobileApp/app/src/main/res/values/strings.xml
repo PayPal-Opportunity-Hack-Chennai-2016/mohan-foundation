@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Organ Donation India</string>
     <string name="app_display_name">Organ Donation India</string>
-    <string name="counselor">Counsellor Login</string>
+    <string name="counselor">Counselor Login</string>
     <string name="eye_bank">Eye Banks</string>
     <string name="skin_bank">Skin Banks</string>
     <string name="body_donation">Body Donation</string>
@@ -196,5 +196,197 @@
      "<b>CLICK ON THE STAR TO BECOME A MEMBER</b>"
  </string>
 
+    <string name="city_prompt">Choose a city</string>
 
+    <string-array name="city_arrays">
+        <item>Ahmedabad</item>
+        |
+        <item>Aizawal</item>
+<item>
+Akaltara</item>
+<item>
+Amravati</item>
+<item>
+Anjar</item>
+<item>
+Aurangabad</item>
+<item>
+Bacheli</item>
+<item>
+Baddi</item>
+<item>
+Bade</item>
+<item>
+Bagasara</item>
+<item>
+Baghmara</item>
+<item>
+Baikunthpur</item>
+<item>
+Bardoli</item>
+<item>
+Bengaluru</item>
+<item>
+Bhagalpur</item>
+<item>
+Bhiwandi</item>
+<item>
+Bhopal</item>
+<item>
+Bilaspur</item>
+<item>
+Bishnupur</item>
+<item>
+BokaroSteelCity</item>
+<item>
+Chamba</item>
+<item>
+Chandel</item>
+<item>
+Churachandpur</item>
+<item>
+Darbhanga</item>
+<item>
+Dawki</item>
+<item>
+Dhanbad</item>
+<item>
+Farīdābād</item>
+<item>
+Gaya</item>
+<item>
+Gulbarga</item>
+<item>
+Guntur</item>
+<item>
+Guwahati</item>
+<item>
+Gwalior</item>
+<item>
+Hubli-Dharwar</item>
+<item>
+Imphal East</item>
+<item>
+Indore</item>
+<item>
+Itanagar</item>
+<item>
+Jabalpur</item>
+<item>
+Jowai</item>
+<item>
+Kadapa</item>
+<item>
+Kalyan</item>
+<item>
+Kochi</item>
+<item>
+Kolasib</item>
+<item>
+Kollam</item>
+<item>
+Kullu</item>
+<item>
+Kurnool</item>
+<item>
+Madgaon</item>
+<item>
+Malappuram</item>
+<item>
+Mandsaur</item>
+<item>
+Mormugao</item>
+<item>
+Mumbai</item>
+<item>
+Mysore</item>
+<item>
+Nagaon</item>
+<item>
+Nagpur</item>
+<item>
+Naharlagun</item>
+<item>
+Nanded</item>
+<item>
+Nashik</item>
+<item>
+Navi Mumbai</item>
+<item>
+Nellore</item>
+<item>
+Nileshwaram</item>
+<item>
+Nongstoin</item>
+<item>
+Ongole</item>
+<item>
+Panaji</item>
+<item>
+Patna</item>
+<item>
+Ponnani</item>
+<item>
+Poonch</item>
+<item>
+Pune</item>
+<item>
+Pānīpat</item>
+<item>
+Ranchi</item>
+<item>
+Rayapur</item>
+<item>
+Rohtak</item>
+<item>
+Rājauri</item>
+<item>
+Sagar</item>
+<item>
+Senapati</item>
+<item>
+Shillong</item>
+<item>
+Shivpuri</item>
+<item>
+Silchar</item>
+<item>
+Simla</item>
+<item>
+Solapur</item>
+<item>
+Sonīpat</item>
+<item>
+Sopore</item>
+<item>
+Srīnagar</item>
+<item>
+Tezpur</item>
+<item>
+Thane</item>
+<item>
+Thiruvananthapuram</item>
+<item>
+Thoubal</item>
+<item>
+Thrissur</item>
+<item>
+Tinsukia</item>
+<item>
+Tirupathi</item>
+<item>
+Tura</item>
+<item>
+Ukhrul</item>
+<item>
+Vijayawada</item>
+<item>
+Visakapatnam</item>
+<item>
+Williamnagar</item>
+<item>
+Yamunānagar</item>
+<item>
+kolhapu</item>
+    </string-array>
 </resources>
