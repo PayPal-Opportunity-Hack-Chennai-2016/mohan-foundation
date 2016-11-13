@@ -66,6 +66,7 @@ crudControllerModule.controller('CRUDController', function($scope, $http,$locati
 
             $scope.isResponseReceivedFromServer = true;
             $scope.status = response.data;
+            $scope.document={};
             $location.href='employees';
         }
         var errorCallback = function (response) {
