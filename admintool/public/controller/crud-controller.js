@@ -8,7 +8,9 @@ crudControllerModule.factory('dataCache', function($cacheFactory) {
 
 crudControllerModule.controller('CRUDController', function($scope, $http,$location, $routeParams, dataCache, collections) {
 
+
     var updateDocumentId = $routeParams.id;
+
 
     function refresh(forceLoad, collectionName) {
         var cacheKey = collectionName + 'list';
@@ -39,9 +41,13 @@ crudControllerModule.controller('CRUDController', function($scope, $http,$locati
             var colelctionsName=  collectionsArray[collectionsIndex];
             var cacheKey = colelctionsName + 'list';
             var documents = dataCache.get(cacheKey);
+            console.log("Collectionindex"+collectionsIndex);
+            console.log("colelctionsName"+colelctionsName);
             if (collectionsIndex == 0) {
                 for (var index = 0; index < documents.length; index++) {
                     var document = documents[index];
+                    console.log("updateDocumentId"+updateDocumentId)
+                    console.log("document._id"+document._id)
                     if (document._id == updateDocumentId ) {
                         $scope[colelctionsName + 'Document'] = document;
                         break;
