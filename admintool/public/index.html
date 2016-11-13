@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="trackerApp">
 <head>
-    <title> Tracker </title>
+    <title> Admin </title>
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
     <script src="ext/angular-1.4.7.js"></script>
     <script src="ext/angular-route-1.4.7.js"></script>
@@ -21,28 +21,38 @@
 
 </head>
 
-<body>
+<body style="background: url();background-repeat: no-repeat;background-size:100%">
 
-<div style="position:absolute; top:70px;" id="menu">
-    <ul>
+<nav class="navbar navbar-default" style="background: #5ba942;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color:#fff"><b>Organ Donation India</b></a>
+        </div>
 
-        <li >
-            <a href="#/projects" >Projects</a>
-        </li>
-        <li >
-            <a href="#/eyebanks" >Eye banks</a>
-        </li>
-        <li>
-            <a href="#/skinbanks" >Skin banks</a>
-        </li>
-        <li>
-            <a href="#/bodydonations" >Body donation</a>
-        </li>
-        <li>
-            <a href="#/transplantcentres" >Transplant Centres</a>
-        </li>
-    </ul>
-</div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" >
+                <li><a href="#/eyebanks" style="color:#fff;">Eye Banks</a></li>
+                <li><a href="#/skinbanks" style="color:#fff;">Skin Banks</a></li>
+                <li><a href="#/bodydonations" style="color:#fff;">Body Donations</a></li>
+                <li><a href="#/organdonationhospitals" style="color:#fff;">Organ donation hospitals</a></li>
+                <li><a href="#/transplantcentres" style="color:#fff;">Transplant Centers</a></li>
+                <li><a href="#/ngoorgandonations" style="color:#fff;">NGO's in Organ Donation</a></li>
+                <li><a href="#/cnsmsg" style="color:#fff;">Counseller</a></li>
+            </ul>
+
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
 
 <div style="position:absolute; left:300px; top:10px; width: 80%; margin: 50px" ng-view></div>
 

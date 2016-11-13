@@ -14,6 +14,11 @@ return {
 app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+        when('/cnsmsg', {
+            templateUrl: 'partials/cnsmsg.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['cnsmsg'])
+        }).
         when('/eyebanks', {
             templateUrl: 'partials/eyebanks.html',
             controller: 'CRUDController',
@@ -62,12 +67,60 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/transplantcentre-update.html',
                 controller: 'CRUDController',
                 resolve: resolveDetails(['transplantcentre'])})
-
+            .when('/bodydonations', {
+                templateUrl: 'partials/bodydonations.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['bodydonation'])
+            }).
+        when('/bodydonation/new', {
+            templateUrl: 'partials/bodydonation-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['bodydonation'])})
+            .when('/bodydonation/import', {
+                templateUrl: 'partials/bodydonation-import.html',
+                controller: 'XLController'})
+            .when('/bodydonation/update/:id', {
+                templateUrl: 'partials/bodydonation-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['bodydonation'])})
+            .when('/organdonationhospitals', {
+                templateUrl: 'partials/organdonationhospitals.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['organdonationhospital'])
+            }).
+        when('/organdonationhospital/new', {
+            templateUrl: 'partials/organdonationhospital-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['organdonationhospital'])})
+            .when('/organdonationhospital/import', {
+                templateUrl: 'partials/organdonationhospital-import.html',
+                controller: 'XLController'})
+            .when('/organdonationhospital/update/:id', {
+                templateUrl: 'partials/organdonationhospital-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['organdonationhospital'])})
+            .when('/ngoorgandonations', {
+                templateUrl: 'partials/ngoorgandonations.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['ngoorgandonation'])
+            }).
+        when('/ngoorgandonation/new', {
+            templateUrl: 'partials/ngoorgandonation-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['ngoorgandonation'])})
+            .when('/ngoorgandonation/import', {
+                templateUrl: 'partials/ngoorgandonation-import.html',
+                controller: 'XLController'})
+            .when('/ngoorgandonation/update/:id', {
+                templateUrl: 'partials/ngoorgandonation-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['ngoorgandonation'])})
             .when('/actions', {
             templateUrl: 'partials/action-list.html',
             controller: 'CRUDController',
             resolve: resolveDetails(['action', 'project'])
         }).
+
         when('/action/new', {
             templateUrl: 'partials/action-new.html',
             controller: 'CRUDController',

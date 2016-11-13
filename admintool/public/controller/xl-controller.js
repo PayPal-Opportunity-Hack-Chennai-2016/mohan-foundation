@@ -36,6 +36,7 @@ xlControllerModule.controller('XLController', function($scope, $http, $routePara
 
     var successCallback = function (response){
         console.log("received success response for POST request, response :" + JSON.stringify(response));
+        
         $scope.isAddDocumentSuccessful = true;
         $scope.isResponseReceivedFromServer = true;
         $scope.status = response.data;

@@ -1,11 +1,11 @@
 <div>
-    <h2 style="margin-left:200px">Transplant Centres</h2><br>
+    <h2 style="margin-left:200px">NGO details</h2><br>
 
-    <a href="#/transplantcentre/new">+ Add new Transplant Centre</a><br><br>
+    <a href="#/ngoorgandonation/new">+ Add NGO Details</a><br><br>
 
 
     <div class="row">
-        <div class="col-md-10" style="margin-left: -10%;margin-right: 10%">
+        <div class="col-md-10" style="margin-left: -10%;margin-right: 10%" >
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form>
@@ -15,28 +15,25 @@
 
                                 <th>State</th>
                                 <th>City</th>
-                                <th>Transplant Centre</th>
+                                <th>NGO Name</th>
                                 <th>Contact</th>
                                 <th>Address</th>
-                                <th>Organ Category</th>
                                 <th>Action</th>
-
                             </tr>
                             </thead>
                             <tbody>
-                            <tr ng-repeat="item in transplantcentreDocuments track by $index">
+                            <tr ng-repeat="item in ngoorgandonationDocuments track by $index">
 
                                 <td>{{item.state}}</td>
                                 <td>{{item.city}}</td>
-                                <td>{{item.hospitalName}}</td>
+                                <td>{{item.ngoName}}</td>
                                 <td>{{item.phone}}</td>
                                 <td>{{item.postalAddress}}</td>
-                                <td>{{item.organCategory}}</td>
                                 <td>
 
-                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[item.$index]" ng-click="modifytransplantcentre(item)"></span>
-                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[item.$index]" ng-click="updatetransplantcentre(item)"></span>
-                                    <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('transplantcentre',item._id)"></span>
+                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[item.$index]" ng-click="modifyngoorgandonation(item)"></span>
+                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[item.$index]" ng-click="updatengoorgandonation(item)"></span>
+                                    <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('ngoorgandonation',item._id)"></span>
                                 </td>
                             </tr>
                             </tbody>
@@ -50,7 +47,7 @@
     </div>
 
     <div style="position:absolute; left:200px; top:30px; width: 1000px; margin: 50px; color: #FFF" ng-controller = "XLController">
-        <a href="#/transplantcentre/import">+ Import from Excel</a>
+        <a href="#/ngoorgandonation/import" style="text-decoration:none;">Import from Excel</a>
     </div>
 
 </div>
