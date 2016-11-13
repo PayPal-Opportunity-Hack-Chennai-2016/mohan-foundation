@@ -8,29 +8,27 @@
         {{status.message}}
     </div>
     <br>
-
-    <label>Employee id :</label>
-    <input style="padding-left: 10px" type="text" name="employee id" ng-model="employeeDocument.id" >
+<label>State :</label>
+    <input style="padding-left: 10px" type="text" name="state" ng-model="bodydonationDocument.state" >
     <br><br>
 
-    <label>Employee name :</label>
-    <input style="padding-left: 10px" type="text" name="employee name" ng-model="employeeDocument.name" >
+    <label>City :</label>
+    <input style="padding-left: 10px" type="text" name="city" ng-model="bodydonationDocument.city" >
 <br><br>
 
-    <label>Employee email :</label>
-    <input style="padding-left: 10px" type="text" name="employee email" ng-model="employeeDocument.email" >
+    <label>College Name  :</label>
+    <input style="padding-left: 10px" type="text" name="nameOfBodydonation" ng-model="bodydonationDocument.nameOfBodydonation" >
     <br><br>
-
-        <label>Employee project :</label>
-        <select style="padding-left: 10px" type="text" name="employee project" ng-model="employeeDocument.project" >
-            <option selected="employeeDocument.project">{{employeeDocument.project}}</option>
-            <option ng-if="project.name != employeeDocument.project" ng-repeat="project in projectDocuments" value="{{project.name}}">{{project.name}}</option>
-            </select>
+    <label>Contact :</label>
+    <input style="padding-left: 10px" type="text" name="contact" ng-model="bodydonationDocument.phone" >
     <br><br>
+    <label>Address :</label>
+    <input style="padding-left: 10px" type="text" name="address" ng-model="bodydonationDocument.postalAddress" >
+    <br><br>
+    
 
-
-    <a class="back" href="#/employees">Back</a> &nbsp;&nbsp;
-    <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="updateDocument('employee')"> Submit</button>
+    <a class="back" href="#/bodydonations">Back</a> &nbsp;&nbsp;
+    <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="updateDocument('bodydonation')"> Submit</button>
     <!--
     //http://jsfiddle.net/fess81/axq5vu41/
         //http://ng-learn.org/2014/01/Dom-Manipulations/

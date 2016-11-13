@@ -31,8 +31,8 @@
                                 <td>{{bank.postalAddress}}</td>
                                 <td>
 
-                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[bank.$index]" ng-click="modifyEyebank(bank)"></span>
-                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[bank.$index]" ng-click="updateEyebank(bank)"></span>
+                                    <a href="#/eyebank/update/{{bank._id}}" ><span class="glyphicon glyphicon-edit" ></span></a>
+                                   
                                     <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('eyebank',bank._id)"></span>
                                 </td>
                             </tr>

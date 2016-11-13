@@ -52,16 +52,13 @@ router.post('/rest/:collectionName', function(req, res) {
 router.put('/rest/:collectionName', function(req, res) {
     var collectionName = req.params.collectionName;
     console.log("received put request : " + JSON.stringify(req.body) + " collectionName :" +  collectionName);
-    Factory.produce('update_' + collectionName + '_validator').validate(req.body, function(status) {
-        console.log("status.success " + status.success);
-        if (status.success) {
+    
             mongoUtil.updateDocument(collectionName, req.body);
-            res.json(status);
-        } else {
-            res.status(400).json(status);
-        }
+            res.json();
+       
+        
     });
-});
+
 
 function validateProject(newProject, callback) {
     if(!newProject || !newProject.name || !newProject.name.trim())  {

@@ -3,34 +3,32 @@
     http://stackoverflow.com/questions/16607874/where-should-model-state-be-stored-in-angular-js
     -->
 
-    <h2>Update project</h2>
+    <h2>Update Details</h2>
     <div ng-if="isResponseReceivedFromServer" ng-init="isResponseReceivedFromServer=false" style="color: #10ff5c">
         {{status.message}}
     </div>
     <br>
 
-    <label>Employee id :</label>
-    <input style="padding-left: 10px" type="text" name="employee id" ng-model="employeeDocument.id" >
+    <label>State :</label>
+    <input style="padding-left: 10px" type="text" name="state" ng-model="eyebankDocument.state" >
     <br><br>
 
-    <label>Employee name :</label>
-    <input style="padding-left: 10px" type="text" name="employee name" ng-model="employeeDocument.name" >
+    <label>City :</label>
+    <input style="padding-left: 10px" type="text" name="city" ng-model="eyebankDocument.city" >
 <br><br>
 
-    <label>Employee email :</label>
-    <input style="padding-left: 10px" type="text" name="employee email" ng-model="employeeDocument.email" >
+    <label>EyeBank Name :</label>
+    <input style="padding-left: 10px" type="text" name="nameOfEyebank" ng-model="eyebankDocument.nameOfEyebank" >
     <br><br>
-
-        <label>Employee project :</label>
-        <select style="padding-left: 10px" type="text" name="employee project" ng-model="employeeDocument.project" >
-            <option selected="employeeDocument.project">{{employeeDocument.project}}</option>
-            <option ng-if="project.name != employeeDocument.project" ng-repeat="project in projectDocuments" value="{{project.name}}">{{project.name}}</option>
-            </select>
+    <label>Contact :</label>
+    <input style="padding-left: 10px" type="text" name="contact" ng-model="eyebankDocument.phone" >
     <br><br>
-
-
-    <a class="back" href="#/employees">Back</a> &nbsp;&nbsp;
-    <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="updateDocument('employee')"> Submit</button>
+    <label>Address :</label>
+    <input style="padding-left: 10px" type="text" name="address" ng-model="eyebankDocument.postalAddress" >
+    <br><br>
+    
+    <a class="btn btn-warning" href="#/eyebanks" style="margin-left:36%">Back</a> &nbsp;&nbsp;
+    <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="updateDocument('eyebank')"> Update</button>
     <!--
     //http://jsfiddle.net/fess81/axq5vu41/
         //http://ng-learn.org/2014/01/Dom-Manipulations/

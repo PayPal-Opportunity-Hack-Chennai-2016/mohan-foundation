@@ -34,8 +34,8 @@
                                 <td>{{item.organCategory}}</td>
                                 <td>
 
-                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[item.$index]" ng-click="modifytransplantcentre(item)"></span>
-                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[item.$index]" ng-click="updatetransplantcentre(item)"></span>
+                                     <a href="#/transplantcentre/update/{{item._id}}" ><span class="glyphicon glyphicon-edit"></span></a>
+                                   
                                     <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('transplantcentre',item._id)"></span>
                                 </td>
                             </tr>
