@@ -95,6 +95,7 @@ public class CounselorLogin extends AppCompatActivity{
             if(emailids[i].equals(emailid))
             {
                 Intent goToComments = new Intent(getApplicationContext(),AddComments.class);
+                goToComments.putExtra("email",emailid);
                 startActivity(goToComments);
             }
         }
