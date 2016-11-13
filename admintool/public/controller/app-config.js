@@ -62,6 +62,22 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/transplantcentre-update.html',
                 controller: 'CRUDController',
                 resolve: resolveDetails(['transplantcentre'])})
+            .when('/bodydonations', {
+                templateUrl: 'partials/bodydonations.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['bodydonation'])
+            }).
+        when('/bodydonation/new', {
+            templateUrl: 'partials/bodydonation-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['bodydonation'])})
+            .when('/bodydonation/import', {
+                templateUrl: 'partials/bodydonation-import.html',
+                controller: 'XLController'})
+            .when('/bodydonation/update/:id', {
+                templateUrl: 'partials/bodydonation-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['bodydonation'])})
             .when('/organdonationhospitals', {
                 templateUrl: 'partials/organdonationhospitals.html',
                 controller: 'CRUDController',
