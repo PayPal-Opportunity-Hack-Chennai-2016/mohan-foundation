@@ -35,16 +35,19 @@
             <div class="col-sm-4">
                 <input class="form-control" id="address" ng-model="document.postalAddress" placeholder="Address">
             </div>
+            </div>
+            <div class="form-group">
             <label for="organCategory" class="col-sm-2 control-label">Organ Category</label>
-            <div class="col-sm-5">
+            <div class="col-sm-4">
                 <input class="form-control" id="organCategory" ng-model="document.organCategory" placeholder="organCategory">
+            </div>
             </div>
         </div>
 
             <div class="form-group">
 
-                <a class="back" href="#/transplantcentres">Back</a> &nbsp;&nbsp;
-                <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" style="width: 60px; height: 20px" ng-click="addDocument('transplantcentre')"> Submit</button>
+                <a class="btn btn-warning" href="#/transplantcentres" style="margin-left:36%">Back</a> &nbsp;&nbsp;
+                <button ng-if="!isAddDocumentSuccessful" ng-init="isAddDocumentSuccessful=false" class="btn btn-success" ng-click="addDocument('transplantcentre')"> Submit</button>
             </div>
         </form>
 

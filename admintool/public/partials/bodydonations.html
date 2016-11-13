@@ -1,11 +1,11 @@
 <div>
-    <h2>Body donation colleges</h2><br>
+    <h2 style="margin-left:200px">Body donation colleges</h2><br>
 
     <a href="#/bodydonation/new">+ Add new body donation college</a><br><br>
 
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10" style="margin-left: -10%;margin-right: 10%">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form>
@@ -31,8 +31,8 @@
                                 <td>{{item.postalAddress}}</td>
                                 <td>
 
-                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[item.$index]" ng-click="modifybodydonation(item)"></span>
-                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[item.$index]" ng-click="updatebodydonation(item)"></span>
+                                    <a href="#/bodydonation/update/{{item._id}}" ><span class="glyphicon glyphicon-edit" ></span></a>
+                                    
                                     <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('bodydonation',item._id)"></span>
                                 </td>
                             </tr>

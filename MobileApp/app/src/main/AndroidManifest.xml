@@ -10,7 +10,8 @@
         android:label="@string/app_display_name"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:logo="@drawable/mf_logo">
         <activity
             android:name=".HomeScreen"
             android:label="@string/app_name"
@@ -50,7 +51,10 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SkinBankSearch" />
         <activity android:name=".DonationBody" />
-        <activity android:name=".AddComments"></activity>
+        <activity android:name=".AddComments" />
+        <activity android:name=".NGOSearch" />
+        <activity android:name=".DonationHospitalSearch" />
+        <activity android:name=".TransplantSearch"></activity>
     </application>
 
 </manifest>

@@ -6,7 +6,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.mohanfoundation.mohanfoundation.Repositories.BodyDonationRepo;
 import com.mohanfoundation.mohanfoundation.Repositories.EyeBackRepo;

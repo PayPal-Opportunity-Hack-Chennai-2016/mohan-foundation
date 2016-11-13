@@ -1,11 +1,11 @@
 <div>
-    <h2>NGO details</h2><br>
+    <h2 style="margin-left:200px">NGO details</h2><br>
 
     <a href="#/ngoorgandonation/new">+ Add NGO Details</a><br><br>
 
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10" style="margin-left: -10%;margin-right: 10%" >
             <div class="panel panel-default">
                 <div class="panel-body">
                     <form>
@@ -15,7 +15,7 @@
 
                                 <th>State</th>
                                 <th>City</th>
-                                <th>NGO name</th>
+                                <th>NGO Name</th>
                                 <th>Contact</th>
                                 <th>Address</th>
                                 <th>Action</th>
@@ -27,13 +27,12 @@
                                 <td>{{item.state}}</td>
                                 <td>{{item.city}}</td>
                                 <td>{{item.ngoName}}</td>
-                                <td>{{item.contactNumber}}</td>
-                                <td>{{item.address}}</td>
-								<td>{{item.emailId}}</td>
+                                <td>{{item.phone}}</td>
+                                <td>{{item.postalAddress}}</td>
                                 <td>
 
-                                    <span class="glyphicon glyphicon-edit" ng-hide="editingData[item.$index]" ng-click="modifyngoorgandonation(item)"></span>
-                                    <span class="glyphicon glyphicon-ok" ng-show="editingData[item.$index]" ng-click="updatengoorgandonation(item)"></span>
+                                    <a href="#/ngoorgandonation/update/{{item._id}}" ><span class="glyphicon glyphicon-edit"></span>
+                                    
                                     <span class="glyphicon glyphicon-remove" ng-click="deleteDocument('ngoorgandonation',item._id)"></span>
                                 </td>
                             </tr>
@@ -48,7 +47,7 @@
     </div>
 
     <div style="position:absolute; left:200px; top:30px; width: 1000px; margin: 50px; color: #FFF" ng-controller = "XLController">
-        <a href="#/ngoorgandonation/import">+ Import from Excel</a>
+        <a href="#/ngoorgandonation/import" style="text-decoration:none;">Import from Excel</a>
     </div>
 
 </div>
