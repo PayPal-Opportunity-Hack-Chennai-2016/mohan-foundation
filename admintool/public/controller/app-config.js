@@ -14,6 +14,11 @@ return {
 app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+        when('/cnsmsg', {
+            templateUrl: 'partials/cnsmsg.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['cnsmsg'])
+        }).
         when('/eyebanks', {
             templateUrl: 'partials/eyebanks.html',
             controller: 'CRUDController',
