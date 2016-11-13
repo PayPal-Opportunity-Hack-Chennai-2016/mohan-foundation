@@ -46,6 +46,22 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/skinbank-update.html',
                 controller: 'CRUDController',
                 resolve: resolveDetails(['skinbank'])})
+            .when('/bodydonations', {
+                templateUrl: 'partials/bodydonations.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['bodydonation'])
+            }).
+        when('/bodydonation/new', {
+            templateUrl: 'partials/bodydonation-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['bodydonation'])})
+            .when('/bodydonation/import', {
+                templateUrl: 'partials/bodydonation-import.html',
+                controller: 'XLController'})
+            .when('/bodydonation/update/:id', {
+                templateUrl: 'partials/bodydonation-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['bodydonation'])})
 
             .when('/actions', {
             templateUrl: 'partials/action-list.html',
