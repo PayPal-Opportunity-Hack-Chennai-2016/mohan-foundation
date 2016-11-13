@@ -62,6 +62,22 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/transplantcentre-update.html',
                 controller: 'CRUDController',
                 resolve: resolveDetails(['transplantcentre'])})
+            .when('/organdonationhospitals', {
+                templateUrl: 'partials/organdonationhospitals.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['organdonationhospital'])
+            }).
+        when('/organdonationhospital/new', {
+            templateUrl: 'partials/organdonationhospital-new.html',
+            controller: 'CRUDController',
+            resolve: resolveDetails(['organdonationhospital'])})
+            .when('/organdonationhospital/import', {
+                templateUrl: 'partials/organdonationhospital-import.html',
+                controller: 'XLController'})
+            .when('/organdonationhospital/update/:id', {
+                templateUrl: 'partials/organdonationhospital-update.html',
+                controller: 'CRUDController',
+                resolve: resolveDetails(['organdonationhospital'])})
             .when('/ngoorgandonations', {
                 templateUrl: 'partials/ngoorgandonations.html',
                 controller: 'CRUDController',
@@ -83,6 +99,7 @@ app.config(['$routeProvider',
             controller: 'CRUDController',
             resolve: resolveDetails(['action', 'project'])
         }).
+
         when('/action/new', {
             templateUrl: 'partials/action-new.html',
             controller: 'CRUDController',
